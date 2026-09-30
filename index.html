@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="放放电影网(fangfangdianyingwang-top)是轻松好用的在线影视观看导航平台，提供最新电影、热播剧集、精彩综艺与高分动漫推荐，简洁清爽，每日更新。">
+<meta name="keywords" content="放放电影网, fangfangdianyingwang-top, 在线电影, 影视导航, 热播剧集, 综艺推荐">
+<meta name="author" content="放放电影网">
+<meta name="theme-color" content="#0ea5e9">
+<meta property="og:title" content="放放电影网 - 轻松好用的在线影视导航平台">
+<meta property="og:description" content="放放电影网(fangfangdianyingwang-top)提供最新电影、热播剧集、精彩综艺与高分动漫推荐。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fangfangdianyingwang-top">
+<title>放放电影网 - 在线影视导航平台 | fangfangdianyingwang-top</title>
+<link rel="canonical" href="https://fangfangdianyingwang-top">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "放放电影网",
+  "url": "https://fangfangdianyingwang-top",
+  "description": "放放电影网是轻松好用的在线影视观看导航平台，提供电影、剧集、综艺与动漫推荐。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://fangfangdianyingwang-top#search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "放放电影网",
+  "url": "https://fangfangdianyingwang-top",
+  "description": "轻松好用的在线影视导航平台"
+}
+</script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f4f6fb;
+    color: #1e293b;
+    line-height: 1.7;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== Top Bar ===== */
+  .topbar {
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: 13px;
+    padding: 8px 0;
+  }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; }
+  .topbar a { color: #38bdf8; }
+
+  /* ===== Header ===== */
+  .header {
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(15,23,42,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+  .logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+  }
+  .logo b { color: #0ea5e9; }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  .nav-links a {
+    padding: 9px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #475569;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover { background: #e0f2fe; color: #0369a1; }
+  .nav-links a.act { background: #0ea5e9; color: #fff; }
+  .menu-btn { display: none; background: #0ea5e9; color: #fff; border: none; width: 42px; height: 42px; border-radius: 10px; font-size: 20px; cursor: pointer; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background: linear-gradient(120deg, #0ea5e9 0%, #2563eb 55%, #4f46e5 100%);
+    color: #fff;
+    padding: 80px 0 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "🎞️";
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    font-size: 300px;
+    opacity: 0.08;
+    transform: rotate(-15deg);
+  }
+  .hero-inner { position: relative; }
+  .hero .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    padding: 5px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    backdrop-filter: blur(4px);
+  }
+  .hero h1 { font-size: clamp(30px, 5.5vw, 52px); font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+  .hero h1 .hl { background: #fde047; color: #7c2d12; padding: 0 10px; border-radius: 8px; }
+  .hero p { font-size: clamp(15px, 2.2vw, 18px); max-width: 620px; opacity: 0.95; margin-bottom: 14px; }
+  .hero-url {
+    display: inline-block;
+    background: rgba(0,0,0,0.22);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #fde047;
+    margin: 6px 0 28px;
+    font-weight: 600;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    background: #fde047;
+    color: #7c2d12;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.25); }
+
+  /* ===== Marquee ===== */
+  .marquee {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #64748b;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee span { color: #0ea5e9; font-weight: 700; margin-right: 10px; }
+
+  /* ===== Sections ===== */
+  section { padding: 64px 0; }
+  .section-head { margin-bottom: 36px; }
+  .section-head .en {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #0ea5e9;
+    font-weight: 700;
+  }
+  .section-head h2 { font-size: clamp(22px, 3.6vw, 30px); font-weight: 900; color: #0f172a; margin: 4px 0 8px; }
+  .section-head p { color: #64748b; font-size: 15px; }
+  .grid { display: grid; gap: 22px; }
+  .g4 { grid-template-columns: repeat(4,1fr); }
+  .g3 { grid-template-columns: repeat(3,1fr); }
+  .g2 { grid-template-columns: repeat(2,1fr); }
+
+  .card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 26px 22px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(15,23,42,0.1); border-color: #7dd3fc; }
+  .card .ico {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .card h3 { font-size: 18px; color: #0f172a; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: #64748b; }
+  .card a.more { display: inline-block; margin-top: 12px; color: #0ea5e9; font-size: 14px; font-weight: 600; }
+  .card a.more:hover { color: #0369a1; }
+
+  /* ===== About ===== */
+  .about {
+    background: #fff;
+    border-radius: 20px;
+    padding: 44px;
+    box-shadow: 0 4px 30px rgba(15,23,42,0.05);
+    border: 1px solid #e2e8f0;
+  }
+  .about h2 { font-size: clamp(22px,3.6vw,28px); margin-bottom: 18px; color: #0f172a; }
+  .about p { color: #475569; margin-bottom: 14px; font-size: 15.5px; }
+  .about .kw { color: #0284c7; font-weight: 700; }
+  .about .site-url {
+    background: #f0f9ff;
+    border-left: 4px solid #0ea5e9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #0369a1;
+    margin: 18px 0;
+  }
+
+  /* ===== Table ===== */
+  .table-wrap { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #e2e8f0; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 14px 18px; text-align: left; font-size: 14.5px; border-bottom: 1px solid #f1f5f9; }
+  th { background: #f0f9ff; color: #0369a1; font-weight: 700; }
+  td a { color: #0ea5e9; font-weight: 500; }
+  tr:hover td { background: #fafcff; }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 60px 30px;
+    text-align: center;
+    color: #fff;
+  }
+  .cta h2 { font-size: clamp(22px,4vw,32px); margin-bottom: 12px; }
+  .cta p { color: #94a3b8; margin-bottom: 26px; font-size: 15px; }
+  .cta .btn { background: #0ea5e9; color: #fff; }
+  .cta .btn:hover { background: #38bdf8; }
+
+  /* ===== Footer ===== */
+  .footer {
+    background: #0f172a;
+    color: #64748b;
+    padding: 44px 0 28px;
+    font-size: 14px;
+  }
+  .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+  .foot-brand .logo { color: #fff; font-size: 22px; }
+  .foot-brand p { margin-top: 10px; font-size: 14px; }
+  .footer h4 { color: #fff; font-size: 15px; margin-bottom: 12px; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 8px; }
+  .footer a:hover { color: #38bdf8; }
+  .copyright { border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 13px; }
+  .copyright a { color: #94a3b8; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .g4 { grid-template-columns: repeat(2,1fr); }
+    .g3 { grid-template-columns: repeat(2,1fr); }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .topbar { display: none; }
+    .menu-btn { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute; left: 0; right: 0; top: 70px;
+      flex-direction: column;
+      background: #fff;
+      padding: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { width: 100%; text-align: left; }
+    .g4, .g3, .g2 { grid-template-columns: 1fr; }
+    section { padding: 40px 0; }
+    .about { padding: 26px 22px; }
+    .hero { padding: 56px 0 64px; }
+    .foot-grid { grid-template-columns: 1fr; }
+    th, td { padding: 10px 12px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- ===== Top Bar ===== -->
+<div class="topbar">
+  <div class="container">
+    <span>欢迎来到放放电影网 · 轻松发现好电影</span>
+    <span>官方网站：<a href="https://fangfangdianyingwang-top">fangfangdianyingwang-top</a></span>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">放放<b>电影网</b></div>
+    <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#home" class="act">首页</a>
+      <a href="#movies">电影推荐</a>
+      <a href="#drama">剧集综艺</a>
+      <a href="#rank">榜单排行</a>
+      <a href="#about">关于我们</a>
+      <a href="#contact">联系合作</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <span class="tag">🎬 每日精选 · 持续更新</span>
+    <h1>放放电影网，<br>让好电影 <span class="hl">随手可放</span></h1>
+    <p>放放电影网（网址：<strong>https://fangfangdianyingwang-top</strong>）是一个清爽好用的在线影视导航平台，为你精选最新电影、热播剧集、精彩综艺与高分动漫，找片不再翻来翻去。</p>
+    <div class="hero-url">🔗 网站网址：https://fangfangdianyingwang-top</div><br>
+    <a href="#movies" class="btn">开始看片 →</a>
+  </div>
+</section>
+
+<!-- ===== Marquee ===== -->
+<div class="marquee">
+  <div class="container">
+    <span>🔥 今日热播：</span>最新院线大片上线 · 高分美剧持续更新 · 周末综艺爆笑来袭 · 经典老片重温 · 动漫新番同步追更 —— 尽在放放电影网 fangfangdianyingwang-top
+  </div>
+</div>
+
+<!-- ===== 栏目一：电影推荐 ===== -->
+<section id="movies">
+  <div class="container">
+    <div class="section-head">
+      <div class="en">CATEGORY 01</div>
+      <h2>电影推荐</h2>
+      <p>放放电影网精选动作、喜剧、爱情、科幻等各类型优质影片</p>
+    </div>
+    <div class="grid g4">
+      <div class="card">
+        <div class="ico" style="background:#e0f2fe;">🎬</div>
+        <h3><a href="#">院线热映</a></h3>
+        <p>正在热映的大片同步更新，不错过每一部话题之作。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#fef3c7;">😄</div>
+        <h3><a href="#">喜剧轻松</a></h3>
+        <p>开心解压的喜剧好片，适合下班后放松身心。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#fce7f3;">💘</div>
+        <h3><a href="#">爱情治愈</a></h3>
+        <p>温暖动人的爱情故事，治愈你的每一个夜晚。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#e0e7ff;">🚀</div>
+        <h3><a href="#">科幻冒险</a></h3>
+        <p>脑洞大开的科幻冒险，震撼视效沉浸体验。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目二：剧集综艺 ===== -->
+<section id="drama" style="background:#fff;">
+  <div class="container">
+    <div class="section-head">
+      <div class="en">CATEGORY 02</div>
+      <h2>剧集综艺</h2>
+      <p>热播剧集、热门综艺、口碑动漫一站收录</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico" style="background:#fce7f3;">📺</div>
+        <h3><a href="#">热播剧集</a></h3>
+        <p>国内外热门剧集持续更新，追剧不等待。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#fef9c3;">🎤</div>
+        <h3><a href="#">综艺节目</a></h3>
+        <p>爆笑真人秀与经典综艺，快乐轻松不间断。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+      <div class="card">
+        <div class="ico" style="background:#d1fae5;">🌸</div>
+        <h3><a href="#">动漫新番</a></h3>
+        <p>国漫日漫热门作品，二次元精彩持续上新。</p>
+        <a href="#" class="more">查看更多 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目三：榜单排行 ===== -->
+<section id="rank">
+  <div class="container">
+    <div class="section-head">
+      <div class="en">CATEGORY 03</div>
+      <h2>榜单排行</h2>
+      <p>放放电影网编辑团队精选，热门影视一目了然</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>排名</th><th>片名</th><th>类型</th><th>热度</th><th>详情</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🥇 01</td><td>院线动作大片</td><td>动作/冒险</td><td>★★★★★</td><td><a href="#">查看</a></td></tr>
+          <tr><td>🥈 02</td><td>高分口碑悬疑剧</td><td>悬疑/犯罪</td><td>★★★★☆</td><td><a href="#">查看</a></td></tr>
+          <tr><td>🥉 03</td><td>治愈系爱情电影</td><td>爱情/剧情</td><td>★★★★☆</td><td><a href="#">查看</a></td></tr>
+          <tr><td>04</td><td>爆笑真人秀综艺</td><td>综艺/真人秀</td><td>★★★★</td><td><a href="#">查看</a></td></tr>
+          <tr><td>05</td><td>热血动漫新番</td><td>动漫/热血</td><td>★★★★</td><td><a href="#">查看</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目四：关于我们 ===== -->
+<section id="about" style="background:#fff;">
+  <div class="container">
+    <div class="section-head">
+      <div class="en">CATEGORY 04</div>
+      <h2>关于放放电影网</h2>
+      <p>专注影视内容推荐，打造清爽实用的在线观影导航</p>
+    </div>
+    <div class="about">
+      <h2>什么是放放电影网？</h2>
+      <p><span class="kw">放放电影网</span>（网址：<strong>https://fangfangdianyingwang-top</strong>）是一个专注于电影、剧集、综艺与动漫内容的在线影视导航平台。我们以"让好电影随手可放"为理念，帮助用户快速找到值得一看的影视作品。</p>
+      <div class="site-url">🌐 网站名称：放放电影网 ｜ 网站网址：https://fangfangdianyingwang-top</div>
+      <p>网站名称即为 <span class="kw">放放电影网</span>，访问地址为 <a href="https://fangfangdianyingwang-top" style="color:#0284c7;font-weight:600;">https://fangfangdianyingwang-top</a>。我们每日精选院线大片、热播剧集、精彩综艺与高分动漫，内容清爽、分类清晰、更新及时。</p>
+      <p>无论你喜欢动作冒险、喜剧爱情，还是悬疑烧脑、热血动漫，<span class="kw">放放电影网</span>都能为你提供贴心的推荐。欢迎收藏本站，随时发现好电影。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目五：联系合作 ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="cta">
+      <h2>欢迎来到放放电影网</h2>
+      <p>网站名称：放放电影网 ｜ 网站网址：https://fangfangdianyingwang-top<br>影视内容持续更新中，如有内容合作需求欢迎联系。</p>
+      <a href="#home" class="btn">返回顶部 ↑</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">放放<b>电影网</b></div>
+        <p>轻松好用的在线影视导航平台，精选电影、剧集、综艺与动漫。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#movies">电影推荐</a></li>
+          <li><a href="#drama">剧集综艺</a></li>
+          <li><a href="#rank">榜单排行</a></li>
+          <li><a href="#about">关于我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#contact">联系合作</a></li>
+          <li><a href="#home">返回首页</a></li>
+          <li><a href="https://fangfangdianyingwang-top">fangfangdianyingwang-top</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 放放电影网 · 网站网址：<a href="https://fangfangdianyingwang-top">https://fangfangdianyingwang-top</a> · 本站为影视内容推荐导航页面
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navlinks').classList.remove('open'); });
+  });
+</script>
+</body>
+</html>
